@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настройки</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="flexbox-container">  
+    <header>
+        <h1 class="hhh">Настройки</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                <li>
+                    <a href="profile.html"><i class="fas fa-user"></i> Профиль</a>
+                    <ul class="dropdown">
+                       <nav class="dr"> <ol><a href="Settings.html"><i class="fas fa-cog"></i>Настройки</a></ol>
+                        <ol><a href="ss.html"><i class="fas fa-history"></i>История покупок</a></ol></nav>
+                    </ul>
+                </li>
+                <li><a href="store.html"><i class="fas fa-store"></i> Магазин</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <div class="box">
+                <h2>Настоящий имя</h2>
+                <form style="padding: 20px;margin: 20px;">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+                </form>
+                <button style="padding: 20px;margin: 20px;">Изменить</button>
+            </div>
+            <div class="box">
+                <h2>Имя для игры</h2>
+                <form style="padding: 20px;margin: 20px;">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+                </form>
+                <button style="padding: 20px;margin: 20px;">Изменить</button>
+            </div>
+            <div class="box">
+                <div class="buttons">
+                    <h2>Изменить</h2><br>
+                    <button>e-mail</button>
+                    <button>Пароль</button>
+                    <button>Способ оплаты</button>
+                    <button>Другие</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    </main>
+    <footer>
+        <p>© 2024 Мой Стим Клон | <a href="contact.html">Связаться с нами</a></p>
+    </footer>
+    <script src="script.js"></script>
+    <div class="fab">
+        <button id="fabButton">+</button>
+        <div class="fab-menu">
+          <a href="https://www.instagram.com/beiskkali/profilecard/?igsh=cjd1NnNxNjFic2F0"><button>Instagram</button></a>
+          
+        </div>
+      </div>
+</body>
+</html>

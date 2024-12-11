@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1 class="hhh">Игры</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                <li>
+                    <a href="profile.html"><i class="fas fa-user"></i> Профиль</a>
+                    <ul class="dropdown">
+                       <nav class="dr"> <ol><a href="Settings.html"><i class="fas fa-cog"></i>Настройки</a></ol>
+                        <ol><a href="ss.html"><i class="fas fa-history"></i>История покупок</a></ol></nav>
+                    </ul>
+                </li>
+                <li><a href="store.html"><i class="fas fa-store"></i> Магазин</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 style="text-align: center;padding: 20px;margin: 20px;">О нас</h2>
+        <div style="display: flex;">
+        <div class="block" style="margin: 10px;">
+            <h3 style="padding-bottom: 20px;">Проблема</h3>
+            <form action="submit_complaint.php" method="POST">
+                <label for="email" style="padding: 10px;">Ваша почта:</label><br>
+                <input type="email" id="email" name="email" placeholder="Введите вашу почту" required><br><br>
+                
+                <label for="complaint" style="padding: 10px;">Жалоба:</label><br>
+                <textarea id="complaint" name="complaint" rows="5" placeholder="Опишите вашу проблему" required></textarea><br><br>
+                
+                <input type="submit" value="Отправить жалобу">
+            </form>
+        </div>
+        <div class="block" style="margin: 10px;">
+            <h3>Контакты</h3>
+            <p>Номер телефона: +7 775 595 1641</p>
+            
+        </div>
+    </div>
+    </main>
+    <footer>
+        <p>© 2024 Мой Стим Клон | <a href="contact.html">Связаться с нами</a></p>
+    </footer>
+    <script src="script.js"></script>
+    <div class="fab">
+        <button id="fabButton">+</button>
+        <div class="fab-menu">
+          <a href="https://www.instagram.com/beiskkali/profilecard/?igsh=cjd1NnNxNjFic2F0"><button>Instagram</button></a>
+          
+        </div>
+      </div>
+</body>
+</html>

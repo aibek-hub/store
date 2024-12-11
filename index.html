@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIstore</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js"></script> 
+</head>
+<body>
+    <header>
+        <h1 class="hhh">Игры</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                <li>
+                    <a href="profile.html"><i class="fas fa-user"></i> Профиль</a>
+                    <ul class="dropdown">
+                       <nav class="dr"> <ol><a href="Settings.html"><i class="fas fa-cog"></i>Настройки</a></ol>
+                        <ol><a href="ss.html"><i class="fas fa-history"></i>История покупок</a></ol></nav>
+                    </ul>
+                </li>
+                <li><a href="store.html"><i class="fas fa-store"></i> Магазин</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+            
+            </ul>
+            <div class="slide-menu">
+                <button id="toggleMenu">☰</button>
+                <div class="menu-content">
+                  <button>Войти</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="hero">
+            <h2>Добро пожаловать!</h2>
+            <p>Здесь вы можете находить и покупать игры.</p>
+            <a href="store.html"><button class="cta-button" id="start-shopping">Начать покупки</button></a>
+        </div>
+        
+            
+        <div class="carousel">
+          <h2 class="abs">Популярные игры</h2>
+          <div class="carousel-images">
+              <img src="Counter-strike_2.jpg" alt="Image 1">
+              <img src="Dota_2_.jpg" alt="Image 2">
+              <img src="rust.jpg" alt="Image 3">
+          </div>
+          <div class="carousel-buttons">
+              <button class="carousel-button prev">&#10094;</button>
+              <button class="carousel-button next">&#10095;</button>
+          </div>
+          <div class="carousel-indicators">
+              <div class="carousel-indicator active" data-index="0"></div>
+              <div class="carousel-indicator" data-index="1"></div>
+              <div class="carousel-indicator" data-index="2"></div>
+          </div>
+          <button class="play-button">Играть</button>
+      </div>
+      <script>const imagesContainer = document.querySelector('.carousel-images');
+        const images = document.querySelectorAll('.carousel-images img');
+        const indicators = document.querySelectorAll('.carousel-indicator');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+
+        let currentIndex = 0;
+        const totalImages = images.length;
+
+        function updateCarousel(index) {
+            imagesContainer.style.transform = `translateX(-${index * 100}%)`;
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === index);
+            });
+        }
+
+        function showNextImage() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateCarousel(currentIndex);
+        }
+
+        function showPrevImage() {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateCarousel(currentIndex);
+        }
+
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentIndex = index;
+                updateCarousel(currentIndex);
+            });
+        });
+
+        prevButton.addEventListener('click', showPrevImage);
+        nextButton.addEventListener('click', showNextImage);
+
+        setInterval(showNextImage, 5000);</script>
+        
+        <div class="block">
+            <h3>Скидки</h3>
+            <div class="cards-container">
+            <div class="product-card">
+                <img src="cyber.jpg" alt="Cyberpunk 2077" class="product-image">
+                <div class="product-details">
+                  <h3>Cyberpunk 2077</h3>
+                  <div class="price-info">
+                    <span class="discount">-55%</span>
+                    <span class="old-price">13 199₸</span>
+                    <span class="new-price">5 939₸</span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <img src="rust.jpg" alt="Rust" class="product-image">
+                <div class="product-details">
+                  <h3>Rust</h3>
+                  <div class="price-info">
+                    <span class="discount">-40%</span>
+                    <span class="old-price">10 000₸</span>
+                    <span class="new-price">6 000₸</span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <img src="battle.jpg" alt="Battlefield™ 2042" class="product-image">
+                <div class="product-details">
+                  <h3>Battlefield™ 2042</h3>
+                  <div class="price-info">
+                    <span class="discount">-92%</span>
+                    <span class="old-price">10 999₸</span>
+                    <span class="new-price">1 599₸</span>
+                  </div>
+                </div>
+              </div>
+              <button class="more-button">Ещё</button>
+        </div>
+    </div>
+    </main>
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+    <div class="progress-bar green">
+        <div class="progress"></div>
+    </div>
+    <div class="progress-bar cyan">
+        <div class="progress"></div>
+    </div>
+    <div class="progress-bar yellow">
+        <div class="progress"></div>
+    </div>
+    <div class="progress-bar red">
+        <div class="progress"></div>
+    </div>
+    <footer>
+        <p>© 2024 Мой Стим Клон | <a href="contact.html">Связаться с нами</a></p>
+    </footer>
+    <script src="script.js"></script>
+    <div class="fab">
+        <button id="fabButton">+</button>
+        <div class="fab-menu">
+          <a href="https://www.instagram.com/beiskkali/profilecard/?igsh=cjd1NnNxNjFic2F0"><button>Instagram</button></a>
+          
+        </div>
+      </div>
+      
+</body>
+</html>
